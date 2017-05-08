@@ -5,7 +5,7 @@ DEFAULT_POOL_SIZE=${DEFAULT_POOL_SIZE:-90}
 MAX_CLIENT_CONN=${MAX_CLIENT_CONN:-500}
 SERVER_RESET_QUERY=${SERVER_RESET_QUERY:-"DISCARD ALL"}
 POOL_MODE=${POOL_MODE:-transaction}
-LISTEN_PORT=${LISTEN_PORT:-5432}
+LISTEN_PORT=${LISTEN_PORT:-6432}
 
 sed -i "s/\${DB}/${DB}/" /etc/pgbouncer/pgbouncer.ini
 sed -i "s/\${HOST}/${HOST}/" /etc/pgbouncer/pgbouncer.ini
@@ -21,4 +21,4 @@ sed -i "s/\${LISTEN_PORT}/${LISTEN_PORT}/" /etc/pgbouncer/pgbouncer.ini
 
 echo "\"${USER}\" \"${PASSWORD}\"" > /etc/pgbouncer/userlist.txt
 
-exec /usr/local/bin/pgbouncer $@
+exec /usr/bin/pgbouncer $@
