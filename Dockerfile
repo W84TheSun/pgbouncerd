@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:latest
 MAINTAINER Dmitry Eremenko wait4thesun@gmail.com
 
 RUN apk --no-cache --progress add pgbouncer
