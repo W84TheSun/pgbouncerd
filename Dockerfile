@@ -1,5 +1,5 @@
 FROM alpine:edge
-MAINTAINER George Kutsurua <g.kutsurua@gmail.com>
+MAINTAINER Dmitry Eremenko wait4thesun@gmail.com
 
 RUN apk --no-cache --progress add pgbouncer
 
