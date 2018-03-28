@@ -13,5 +13,4 @@ ENV DB=database HOST=host PORT=5432 \
 
 EXPOSE $LISTEN_PORT
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["-u", "pgbouncer", "/etc/pgbouncer/pgbouncer.ini"]
+CMD ["/usr/bin/pgbouncer", "-u", "pgbouncer", "/etc/pgbouncer/pgbouncer.ini"]
